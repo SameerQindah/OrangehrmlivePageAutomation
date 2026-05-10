@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-10T10:46:37 EEST" name="Default suite" finished-at="2026-05-10T10:47:25 EEST" duration-ms="48057">
+    <groups>
+    </groups>
+    <test started-at="2026-05-10T10:46:37 EEST" name="Default test" finished-at="2026-05-10T10:47:25 EEST" duration-ms="48057">
+      <class name="orangehrmlive.TestLogin">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:orangehrmlive.TestLogin@62c5bbdc]" started-at="2026-05-10T10:46:37 EEST" name="openBrowser" finished-at="2026-05-10T10:46:44 EEST" duration-ms="6234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="ForgotPassword()[pri:0, instance:orangehrmlive.TestLogin@62c5bbdc]" started-at="2026-05-10T10:46:44 EEST" name="ForgotPassword" finished-at="2026-05-10T10:46:47 EEST" duration-ms="3496" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ForgotPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:orangehrmlive.TestLogin@62c5bbdc]" started-at="2026-05-10T10:46:47 EEST" name="tearDown" finished-at="2026-05-10T10:46:47 EEST" duration-ms="194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:orangehrmlive.TestLogin@62c5bbdc]" started-at="2026-05-10T10:46:47 EEST" name="openBrowser" finished-at="2026-05-10T10:46:52 EEST" duration-ms="4302" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="OrangeHRMIncLink()[pri:0, instance:orangehrmlive.TestLogin@62c5bbdc]" started-at="2026-05-10T10:46:52 EEST" name="OrangeHRMIncLink" finished-at="2026-05-10T10:46:55 EEST" duration-ms="3792" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OrangeHRMIncLink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:orangehrmlive.TestLogin@62c5bbdc]" started-at="2026-05-10T10:46:55 EEST" name="tearDown" finished-at="2026-05-10T10:46:56 EEST" duration-ms="200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:orangehrmlive.TestLogin@62c5bbdc]" started-at="2026-05-10T10:46:56 EEST" name="openBrowser" finished-at="2026-05-10T10:47:00 EEST" duration-ms="4134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="emptyLogin()[pri:0, instance:orangehrmlive.TestLogin@62c5bbdc]" started-at="2026-05-10T10:47:00 EEST" name="emptyLogin" finished-at="2026-05-10T10:47:03 EEST" duration-ms="3202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:orangehrmlive.TestLogin@62c5bbdc]" started-at="2026-05-10T10:47:03 EEST" name="tearDown" finished-at="2026-05-10T10:47:03 EEST" duration-ms="144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:orangehrmlive.TestLogin@62c5bbdc]" started-at="2026-05-10T10:47:03 EEST" name="openBrowser" finished-at="2026-05-10T10:47:07 EEST" duration-ms="4457" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="invalidLogin()[pri:0, instance:orangehrmlive.TestLogin@62c5bbdc]" started-at="2026-05-10T10:47:07 EEST" name="invalidLogin" finished-at="2026-05-10T10:47:14 EEST" duration-ms="6388" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:orangehrmlive.TestLogin@62c5bbdc]" started-at="2026-05-10T10:47:14 EEST" name="tearDown" finished-at="2026-05-10T10:47:14 EEST" duration-ms="133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:orangehrmlive.TestLogin@62c5bbdc]" started-at="2026-05-10T10:47:14 EEST" name="openBrowser" finished-at="2026-05-10T10:47:18 EEST" duration-ms="3935" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="validLogin()[pri:0, instance:orangehrmlive.TestLogin@62c5bbdc]" started-at="2026-05-10T10:47:18 EEST" name="validLogin" finished-at="2026-05-10T10:47:25 EEST" duration-ms="7189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:orangehrmlive.TestLogin@62c5bbdc]" started-at="2026-05-10T10:47:25 EEST" name="tearDown" finished-at="2026-05-10T10:47:25 EEST" duration-ms="180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- orangehrmlive.TestLogin -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
