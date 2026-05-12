@@ -7,9 +7,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import locaters.loginlocaters;
-import mainpage.LoginPage;
+import mainpage.BasePage;
 
-public class TestLogin extends LoginPage {
+public class TestLogin extends BasePage {
 
 	@BeforeMethod
     public void openBrowser() {
