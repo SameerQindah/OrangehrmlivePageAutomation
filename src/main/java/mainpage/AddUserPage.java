@@ -8,7 +8,7 @@ import locaters.loginlocaters;
 
 public class AddUserPage {
 	public WebDriver driver;
-
+	
     public void setUp() {
         driver = new ChromeDriver();
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");

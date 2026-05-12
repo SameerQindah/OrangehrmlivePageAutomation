@@ -5,9 +5,16 @@
     <classes>
       <class name="orangehrmlive.TestAddUser">
         <methods>
+          <include name="invalidAdd"/>
+          <include name="cancelAdd"/>
+          <include name="UsernameLessthan5characters"/>
+          <include name="emptyAdd"/>
+          <include name="PasswordsDoNotMatch"/>
           <include name="openBrowser"/>
-          <include name="validLogin"/>
           <include name="tearDown"/>
+          <include name="userNameAlreadyExists"/>
+          <include name="validadded"/>
+          <include name="nextToHomePage"/>
         </methods>
       </class> <!-- orangehrmlive.TestAddUser -->
     </classes>

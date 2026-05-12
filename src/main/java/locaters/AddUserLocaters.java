@@ -20,4 +20,5 @@ public class AddUserLocaters {
     public static final By SaveButton =By.cssSelector("button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space");
 	public static final By CancelButton = By.cssSelector("button.oxd-button.oxd-button--medium.oxd-button--ghost");
     
+	
 }

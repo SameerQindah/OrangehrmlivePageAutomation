@@ -3,7 +3,9 @@ package orangehrmlive;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -12,11 +14,15 @@ import mainpage.AddUserPage;
 
 public class TestAddUser extends AddUserPage {
 	
-	@BeforeMethod
-    public void openBrowser() throws InterruptedException {
+	@BeforeClass
+	public void openBrowser() throws InterruptedException {
         setUp();
         Thread.sleep(5000);
         loginOrangehrmlive ();
+	}
+	
+	@BeforeMethod
+    public void nextToHomePage() throws InterruptedException {
         Thread.sleep(5000);
         clickOnAdminTab();
         Thread.sleep(5000);
@@ -24,9 +30,9 @@ public class TestAddUser extends AddUserPage {
         Thread.sleep(5000);
     }
 
-
+	
     @Test
-    public void validLogin() throws InterruptedException { //valid add with correct all text filed
+    public void validadded() throws InterruptedException { //add a user with valid data in all required fields
     	TextElement("Admin", AddUserLocaters.UserRoleText);
         Thread.sleep(2000);
         clickButton(AddUserLocaters.AdminOption);
@@ -37,7 +43,7 @@ public class TestAddUser extends AddUserPage {
         clickButton(AddUserLocaters.EmployeeOption);
 
         
-        TextElement("maysam2", AddUserLocaters.UserName);
+        TextElement("maysam5", AddUserLocaters.UserName);
         
     	TextElement("Enabled", AddUserLocaters.Status);
         Thread.sleep(2000);
@@ -51,14 +57,64 @@ public class TestAddUser extends AddUserPage {
         clickButton(AddUserLocaters.SaveButton);
        
         Thread.sleep(10000);
-        String actualText = driver.findElement(By.xpath("//div[text()='maysam2']")).getText();
-        Assert.assertEquals(actualText, "maysam2"); 
+        String actualText = driver.findElement(By.xpath("//div[text()='maysam5']")).getText();
+        Assert.assertEquals(actualText, "maysam5"); 
     }
     
+    @Test
+    public void PasswordsDoNotMatch() throws InterruptedException { // add a user with passwords that do not match
+    	TextElement("Admin", AddUserLocaters.UserRoleText);
+        Thread.sleep(2000);
+        clickButton(AddUserLocaters.AdminOption);
+
+    	
+    	TextElement("sa" , AddUserLocaters.EmployeeName);
+        Thread.sleep(5000);
+        clickButton(AddUserLocaters.EmployeeOption);
+
+        
+        TextElement("mohammed1", AddUserLocaters.UserName);
+        
+    	TextElement("Enabled", AddUserLocaters.Status);
+        Thread.sleep(2000);
+        clickButton(AddUserLocaters.EnabledOption);
+
+    	TextElement("admin12", AddUserLocaters.Password);
+    	TextElement("sameer12", AddUserLocaters.ConfirmPassword);
+               
+        WebElement errorMessage = driver.findElement(AddUserLocaters.emptyerrorMessage);
+        String actualMessageText = errorMessage.getText();
+        String expectedMessageText = "Passwords do not match";
+        Assert.assertEquals(actualMessageText, expectedMessageText);
+    }
 	
+	@Test
+    public void userNameAlreadyExists() throws InterruptedException { // add a user with a username that already exists
+    	TextElement("Admin", AddUserLocaters.UserRoleText);
+        Thread.sleep(2000);
+        clickButton(AddUserLocaters.AdminOption);
+
+    	
+    	TextElement("sa" , AddUserLocaters.EmployeeName);
+        Thread.sleep(5000);
+        clickButton(AddUserLocaters.EmployeeOption);
+
+        TextElement("Enabled", AddUserLocaters.Status);
+        Thread.sleep(2000);
+        clickButton(AddUserLocaters.EnabledOption);
+        
+        TextElement("maysam1", AddUserLocaters.UserName);
+        
+        Thread.sleep(3000);
+
+        WebElement errorMessage = driver.findElement(AddUserLocaters.emptyerrorMessage);
+        String actualMessageText = errorMessage.getText();
+        String expectedMessageText = "Already exists";
+        Assert.assertEquals(actualMessageText, expectedMessageText);
+    }
 	
     @Test
-    public void invalidAdd() throws InterruptedException {//add with invalid employee name
+    public void invalidEmployeeName() throws InterruptedException {// add a user with an invalid employee name
     	TextElement("Admin", AddUserLocaters.UserRoleText);
         clickButton(AddUserLocaters.AdminOption);
 
@@ -79,7 +135,7 @@ public class TestAddUser extends AddUserPage {
     }
     
     @Test
-    public void emptyAdd() throws InterruptedException { //add with invalid text field
+    public void emptyAdd() throws InterruptedException { //add a user with empty data in required fields
         Thread.sleep(2000);
 
     	clickButton(AddUserLocaters.SaveButton);
@@ -94,7 +150,7 @@ public class TestAddUser extends AddUserPage {
     }
    
 	@Test
-    public void cancelAdd() throws InterruptedException { //cancel the add
+    public void cancelAdd() throws InterruptedException { //cancel the add user process
     	clickButton(AddUserLocaters.CancelButton);
         Thread.sleep(2000);
 
@@ -103,8 +159,31 @@ public class TestAddUser extends AddUserPage {
         Assert.assertEquals(actual, expected);
     }
      
-    
-    @AfterMethod
+	 @Test
+	    public void UsernameLessthan5characters() throws InterruptedException { //add a user with a username less than 5 characters
+	    	TextElement("Admin", AddUserLocaters.UserRoleText);
+	        Thread.sleep(2000);
+	        clickButton(AddUserLocaters.AdminOption);
+
+	    	
+	    	TextElement("sa" , AddUserLocaters.EmployeeName);
+	        Thread.sleep(4000);
+	        clickButton(AddUserLocaters.EmployeeOption);
+
+	        
+	        TextElement("may", AddUserLocaters.UserName);
+	        
+	    	TextElement("Enabled", AddUserLocaters.Status);
+	        Thread.sleep(2000);
+	        clickButton(AddUserLocaters.EnabledOption);
+
+	        WebElement errorMessage = driver.findElement(AddUserLocaters.emptyerrorMessage);
+	        String actualMessageText = errorMessage.getText();
+	        String expectedMessageText = "Should be at least 5 characters";
+	        Assert.assertEquals(actualMessageText, expectedMessageText);
+	    }
+	
+    @AfterClass
     public void tearDown() {
         quit();
     }
