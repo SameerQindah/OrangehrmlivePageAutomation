@@ -21,9 +21,5 @@ public class AddUserPage extends BasePage{
     public void clickOnAddButton (){ //Pre-condition for go next to "add user" page
     	driver.findElement(By.xpath("//button[normalize-space()='Add']")).click();
     	}
-
-    public void quit() {
-        driver.quit();
-    }
     
 }
