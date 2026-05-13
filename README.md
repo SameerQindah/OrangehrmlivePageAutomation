@@ -4,3 +4,6 @@
 
 ## 2) Add User Page
 <img width="500" height="313" alt="image" src="https://github.com/user-attachments/assets/d3c72d6d-6e71-4ffe-9bd8-f4768e3a2352" />
+
+## 3) Search By Job Title
+<img width="1792" height="1120" alt="Screenshot 2026-05-13 at 14 28 21" src="https://github.com/user-attachments/assets/227b3ee3-5544-450e-84c4-a94daa393211" />
