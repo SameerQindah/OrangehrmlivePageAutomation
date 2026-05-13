@@ -7,12 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import locaters.loginlocaters;
 
 public class AddUserPage extends BasePage{
-
-    public void loginOrangehrmlive () { //Pre-condition for login this website 
-    	TextElement("Admin", loginlocaters.Username);
-    	TextElement("admin123", loginlocaters.Password);
-        clickButton(loginlocaters.SubmitButton);
-    }
     
     public void clickOnAdminTab () { //Pre-condition for go next to "add user" page
     	driver.findElement(By.cssSelector("a[href='/web/index.php/admin/viewAdminModule']")).click();

@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import locaters.loginlocaters;
+
 public class BasePage {
 	public WebDriver driver;
 
@@ -20,6 +22,12 @@ public class BasePage {
 
     public void clickButton(By locator) {
         driver.findElement(locator).click();
+    }
+    
+    public void loginOrangehrmlive () { //Pre-condition for login this website 
+    	TextElement("Admin", loginlocaters.Username);
+    	TextElement("admin123", loginlocaters.Password);
+        clickButton(loginlocaters.SubmitButton);
     }
 
     public void quit() {
