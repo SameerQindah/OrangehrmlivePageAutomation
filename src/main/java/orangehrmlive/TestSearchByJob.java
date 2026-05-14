@@ -29,7 +29,7 @@ public class TestSearchByJob extends SearchByJobPage {
     }
 	
 	@Test
-    public void cancelAdd() throws InterruptedException { // the user can reset the job title search filter
+    public void ResetJob() throws InterruptedException { // the user can reset the job title search filter
         clickButton(SearchByJobLoacaters.JobTitleDropdown);
         Thread.sleep(2000);
         clickButton(By.xpath("//div[@role='option']//span[text()='QA Engineer']"));

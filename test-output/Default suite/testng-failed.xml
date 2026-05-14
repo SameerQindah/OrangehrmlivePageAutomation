@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="orangehrmlive.TestSearchByJob">
+      <class name="orangehrmlive.EditUserDataTest">
         <methods>
+          <include name="openBrowser"/>
+          <include name="validEditDataUser"/>
           <include name="nextToHomePage"/>
           <include name="tearDown"/>
-          <include name="validSearchNotFound"/>
-          <include name="openBrowser"/>
+          <include name="cancelEdit"/>
         </methods>
-      </class> <!-- orangehrmlive.TestSearchByJob -->
+      </class> <!-- orangehrmlive.EditUserDataTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
