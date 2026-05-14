@@ -13,5 +13,10 @@ public class EditUserDataLocaters {
 	    public static final By ConfirmPasswordInput =By.xpath("//label[text()='Confirm Password']/../following-sibling::div//input[@type='password']");
 	    public static final By SaveButton =By.xpath("//button[@type='submit']");
 	    public static final By CancelButton =By.xpath("//button[normalize-space()='Cancel']");
+	    public static final By AdminOption =By.xpath("//div[@role='option']//span[text()='Admin']");
+	    public static final By EnableOption =By.xpath("//div[@role='option']//span[text()='Enabled']");
+	    public static By employeeNameInList(String employeeName) {
+	        return By.xpath("//div[@role='row'][.//div[text()='" + employeeName + "']]");
+	    }
 	
 }

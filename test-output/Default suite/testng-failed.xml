@@ -9,7 +9,6 @@
           <include name="validEditDataUser"/>
           <include name="nextToHomePage"/>
           <include name="tearDown"/>
-          <include name="cancelEdit"/>
         </methods>
       </class> <!-- orangehrmlive.EditUserDataTest -->
     </classes>

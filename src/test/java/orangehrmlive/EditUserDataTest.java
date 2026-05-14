@@ -33,17 +33,19 @@ public class EditUserDataTest extends EditUserDataPage {
     public void validEditDataUser() throws InterruptedException { //update all data of user successful
 		clickButton(EditUserDataLocaters.UserRoleDropdown);
         Thread.sleep(2000);
-        clickButton(By.xpath("//div[@role='option']//span[text()='Admin']"));
+        clickButton(EditUserDataLocaters.AdminOption);
         
         clear(EditUserDataLocaters.EmployeeNameInput);
         TextElement("sa" , EditUserDataLocaters.EmployeeNameInput);
         Thread.sleep(3000);
         clickButton(EditUserDataLocaters.EmployeeOption);
         
+        clear(EditUserDataLocaters.UsernameInput);
+        TextElement("sameer a" , EditUserDataLocaters.UsernameInput);
         
         clickButton(EditUserDataLocaters.StatusDropdown);
         Thread.sleep(2000);
-        clickButton(By.xpath("//div[@role='option']//span[text()='Enabled']"));;
+        clickButton(EditUserDataLocaters.EnableOption);;
 
         clickButton(EditUserDataLocaters.ChangePasswordCheckbox);
 
@@ -52,11 +54,18 @@ public class EditUserDataTest extends EditUserDataPage {
         
         clickButton(EditUserDataLocaters.SaveButton);
        
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         Assert.assertTrue(
             driver.getPageSource().contains("Successfully Updated"),
             "User data was not updated successfully"
+        );
+        Thread.sleep(5000);
+        String employeeName = "sameer a";
+
+        Assert.assertTrue(
+                driver.findElement(EditUserDataLocaters.employeeNameInList(employeeName)).isDisplayed(),
+                "Updated employee name is not displayed in the list"
         );
         
     }
