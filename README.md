@@ -7,3 +7,6 @@
 
 ## 3) Search By Job Title
 <img width="1792" height="1120" alt="Screenshot 2026-05-13 at 14 28 21" src="https://github.com/user-attachments/assets/227b3ee3-5544-450e-84c4-a94daa393211" />
+
+## 4) Edit User Information 
+<img width="1792" height="1120" alt="Screenshot 2026-05-14 at 10 49 10" src="https://github.com/user-attachments/assets/4b329b19-c01f-4e99-a067-79d77cbe7e7b" />
